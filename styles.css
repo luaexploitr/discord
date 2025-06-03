@@ -1,0 +1,109 @@
+* {
+    font-family: "Calibri", sans-serif;
+    margin: 0;
+    padding: 0;
+
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;  
+}
+
+body {
+    align-items: center;
+    background-attachment: fixed;
+    background-image: url("./media/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.avatar {
+    border: 1px solid white;
+    border-radius: 999px;
+    height: 120px;
+    width: 120px;
+}
+
+.container > button {
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 22px;
+    gap: 5px;
+    justify-content: center;
+    min-width: 300px;
+    padding: 3px 0;
+    position: relative;
+    width: 100%;
+}
+
+.like {
+    background-color: #00a4ef;
+    border: 2px solid #0079b1;
+}
+
+.subscribe {
+    background-color: #ff0000;
+    border: 2px solid #b40101;
+}
+
+.script {
+    background-color: #02db02;
+    border: 2px solid #00b400;
+}
+
+button:disabled {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.icon, .arrow {
+    height: 20px;
+    position: absolute;
+    width: 20px;
+}
+
+.icon {
+    left: 10px;
+}
+
+.arrow {
+    right: 10px;
+}
+
+@media (max-width: 340px) {
+    .container {
+        margin: 0 10px;
+        width: 100%;
+    }
+
+    .container > button {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 250px) {
+    .icon, .arrow {
+        display: none;
+    }
+}
